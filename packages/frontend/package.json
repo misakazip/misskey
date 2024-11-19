@@ -59,7 +59,7 @@
 		"punycode": "2.3.1",
 		"rollup": "4.26.0",
 		"sanitize-html": "2.13.1",
-		"sass": "1.79.3",
+		"sass": "1.81.0",
 		"shiki": "1.22.2",
 		"strict-event-emitter-types": "2.0.0",
 		"textarea-caret": "3.1.0",

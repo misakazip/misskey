@@ -10,9 +10,6 @@ SPDX-License-Identifier: AGPL-3.0-only
 		<MkSpacer v-if="tab === 'overview'" :contentMax="600" :marginMin="20">
 			<XOverview/>
 		</MkSpacer>
-		<MkSpacer v-else-if="tab === 'emojis'" :contentMax="1000" :marginMin="20">
-			<XEmojis/>
-		</MkSpacer>
 		<MkSpacer v-else-if="tab === 'federation'" :contentMax="1000" :marginMin="20">
 			<XFederation/>
 		</MkSpacer>
@@ -31,7 +28,6 @@ import { definePageMetadata } from '@/scripts/page-metadata.js';
 import MkHorizontalSwipe from '@/components/MkHorizontalSwipe.vue';
 
 const XOverview = defineAsyncComponent(() => import('@/pages/about.overview.vue'));
-const XEmojis = defineAsyncComponent(() => import('@/pages/about.emojis.vue'));
 const XFederation = defineAsyncComponent(() => import('@/pages/about.federation.vue'));
 const MkInstanceStats = defineAsyncComponent(() => import('@/components/MkInstanceStats.vue'));
 
@@ -54,10 +50,6 @@ const headerActions = computed(() => []);
 const headerTabs = computed(() => [{
 	key: 'overview',
 	title: i18n.ts.overview,
-}, {
-	key: 'emojis',
-	title: i18n.ts.customEmojis,
-	icon: 'ti ti-icons',
 }, {
 	key: 'federation',
 	title: i18n.ts.federation,
